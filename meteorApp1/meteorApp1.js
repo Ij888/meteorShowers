@@ -1,23 +1,17 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+    var img_data = [
+	{img_src:"mtr.jpg", img_alt:"a meteor"},
+	{img_src:"geyser.jpg", img_alt:"a geyser"},
+	{img_src:"anthill.jpg", img_alt:"an anthill"},
+	{img_src:"bolts.jpg", img_alt:"some old bolts"}
+	];
+	//console.log("client")
+	
+	Template.dataStore.helpers({delta:img_data});//what nuance is this-- delta:img_data??
+	//dataStore above needs be the same name as the template in webApp1.html
+   
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+   console.log("server")
 }

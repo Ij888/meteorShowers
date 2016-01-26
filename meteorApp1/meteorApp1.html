@@ -3,12 +3,15 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Just another web app!</h1>
 
-  {{> hello}}
+  {{> dataStore}} <!--This calls the template defined below on line 11-->
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="dataStore"><!--template name must match that specified in meteorApp1.js on line 10-->
+	{{#each delta}}
+
+		<img src="{{img_src}}" alt="{{img_alt}}" />
+  
+	{{/each}}
 </template>
