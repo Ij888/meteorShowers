@@ -1,3 +1,6 @@
+Images = new Mongo.collection("images");
+	console.log(Images.find().count);
+
 if (Meteor.isClient) {
     var img_data = [
 	{img_src:"mtr.jpg", img_alt:"a meteor"},
