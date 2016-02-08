@@ -1,6 +1,6 @@
 if (Meteor.isServer){
 	Meteor.startup(function(){
-		if (Images.find().count() == 0){
+		if (Images.find().count() === 0){
 			Images.insert(
 				{img_src:"mtr.jpg", img_alt:"a meteor"}
 			);
@@ -8,6 +8,6 @@ if (Meteor.isServer){
 	});
 }
 
-if (meteor.isClient){
-	
+if (Meteor.isClient){
+
 }
