@@ -9,20 +9,20 @@ if (Meteor.isClient) {
 	{img_src:"bolts.jpg", img_alt:"some old bolts"}
 	];
 	//console.log("client")
-	
+
 	Template.dataStore.helpers({delta:img_data});//what nuance is this-- delta:img_data??
 	//dataStore above needs be the same name as the template in webApp1.html
-   
+
    Template.dataStore.events({
 	   'click .js-image':function(event){
 		   //alert("an image.");
 		   //console.log(event);
 		   $(event.target).css("width", "100%");
 	   }
-	   
-   })
+
+   });
 }
 
 if (Meteor.isServer) {
-   console.log("server")
+   console.log("server");
 }
