@@ -6,7 +6,7 @@ if (Meteor.isServer){
 					{img_src:"img_"+i+".jpg", img_alt:"image number "+i}
 				);
 			}// end of for insert images
-		
+			// count the images!
 			console.log("startup.js says: "+Images.find().count());
 		}// end of if have no images
 	});
