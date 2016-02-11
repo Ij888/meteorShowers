@@ -4,7 +4,7 @@ if (Meteor.isServer){
 			Images.insert(
 				{img_src:"mtr.jpg", img_alt:"a meteor"}
 			);
-		}//end of if #hasNoImages
+		}//end of if #hasNoImages. append another
 	});
 }
 
